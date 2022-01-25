@@ -1,0 +1,83 @@
+@mixin global {
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: $textColor;
+    &:hover {
+      color: $maincolor;
+    }
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    color: $textColor;
+    line-height: 3.3rem;
+    @include breakpoints(medium_screen){
+      font-size: 2rem;
+    }
+  }
+
+  h3 {
+    font-size: 1.3rem;
+    color: $textColor;
+  }
+  .container {
+    padding: 1rem 4rem;
+  }
+  .navbar,
+  .heros {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .scroll-up{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 36px;
+    height: 36px;
+    background-color: $maincolor;
+    line-height: 36px;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+    border-radius: 3px;
+    z-index: 1000;
+    opacity: 0;
+    cursor: pointer;
+    transition: opacity 0.3s ease-out 0s;
+    &:hover,
+    &:focus{
+      background: #333;
+      color: #fff;
+    }
+    &.showUp{
+      opacity: 1;
+    }
+  }
+}
+// END GLOBAL RULES

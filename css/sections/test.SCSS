@@ -1,0 +1,144 @@
+nav {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+  @include breakpoints(medium_screen){
+    .container{
+      max-width: 77%;
+      padding-inline: 2rem;
+    }
+    .main-links{
+      display: none;
+    }
+  }
+  @include breakpoints(large_screen){
+    .nav-toggle {
+      display: none;
+    }
+    
+  }
+  .show-links {
+    height: 10rem;
+  }
+  .nav-toggle{
+    font-size: 1.5rem;
+    color: $textColor;
+    background: transparent;
+    border-color: transparent;
+    cursor: pointer;
+  }
+    &.scrollNav{
+      background-color: #fff;
+      box-shadow: $navShadow;
+    }
+  
+
+    .sidebar-toggle {
+      top: 2rem;
+      left: 3rem;
+      font-size: 2rem;
+      background: transparent;
+      border-color: transparent;
+      cursor: pointer;
+      color: #151735;
+    }
+    
+    .sidebar-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 1.5rem;
+      position: relative;
+    }
+    .close-btn {
+    position: absolute;
+    top: 15px;
+    right:30px;
+    z-index: 1;
+    cursor: pointer;
+    border-radius: 100%;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    font-size: 16px;
+    background: #333;
+    border:none;
+    color: #fff;
+    }
+    
+    
+    .links a {
+      display: block;
+      font-size: 1.5rem;
+      text-transform: capitalize;
+      padding: 1rem 1.5rem;
+      color:$whiteText;
+    }
+    .links a:hover {
+      padding-left: 1.75rem;
+    }
+
+    .sidebar {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: $maincolor;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      row-gap: 1rem;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      transition: all 0.3s linear; 
+      transform: translate(100%);
+    }
+    .show-sidebar {
+      transform: translate(0);
+    }
+    @media screen and (min-width: 676px) {
+      .sidebar {
+        width: 400px;
+      }
+    }
+    .main-nav{
+
+      .main-links {
+        ul {
+          display: flex;
+          li {
+            margin-inline: 0.75rem;
+            a{
+              padding-block: 35px;
+            }
+            &:hover {
+              color: $maincolor;
+              transition: 2s ease 0s;
+            }
+            i {
+              margin-left: 0.5rem;
+            }
+          }
+        }
+    }
+    }
+  
+    .user {
+      display: flex;
+      align-items: center;
+      ul li {
+        margin-right: 1.5rem;
+      }
+      .btn{
+        @extend %slideBtn;
+      }
+    }
+  }
+
+  
+
+  .resp-nav{
+    @include breakpoints(large_screen){
+      display:none;
+    }
+  }

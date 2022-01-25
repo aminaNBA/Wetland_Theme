@@ -1,0 +1,96 @@
+.plan {
+  padding-block: 5rem;
+  background-color: $bgPlan;
+  h2 {
+    width: 60%;
+    padding-bottom: 3rem;
+    @include breakpoints(medium_screen){
+      width: 100%;
+    }
+  }
+  .items {
+    display: flex;
+    @include breakpoints(medium_screen){
+          flex-wrap: wrap;
+          &_item{
+            max-width: calc(100% / 2 - 2rem);
+          }
+        }
+    @include breakpoints(small_screen){
+        flex-direction: column;
+        }
+    gap: 3rem;
+    &_item {
+      background-color: $whiteText;
+      box-shadow: $planShadow;
+      border-radius: 0.75rem;
+      padding: 2rem 3rem;
+      &:nth-child(2){
+        background-image: linear-gradient(0deg, #f2eafe 0%, white 100%);
+        border: 2px solid $maincolor;
+      }
+      & .plan-header {
+        & .title {
+          font-size: 16px;
+          color: #57556a;
+          font-weight: 600;
+          margin-bottom: 15px;
+        }
+        & .plan-content {
+          .pricing {
+            margin-bottom: 15px;
+            .price {
+              font-size: 40px;
+              color: $textColor;
+              margin-top: 0px;
+              font-weight: 700;
+              line-height: 1.2;
+              margin-bottom: 15px;
+            }
+            & span {
+              font-size: 14px;
+              color: $paragraph;
+              font-weight: 500;
+            }
+          }
+          .duration {
+            font-size: 15px;
+            font-weight: normal;
+            color: #57556a;
+            margin-bottom: 15px;
+            line-height: 26px;
+            display: block;
+          }
+        }
+      }
+      & .plan-features {
+        margin: 0 0 40px;
+        ul {
+          li {
+            position: relative;
+            padding-left: 23px;
+            @extend %items;
+            &:before {
+              position: absolute;
+              content: "\f00c";
+              font-family: "Font Awesome 5 Free";
+              font-size: 15px;
+              color: #6c6a8a;
+              left: 0;
+              top: 1px;
+              font-weight: 600;
+            }
+            &:not(:last-child) {
+              margin-bottom: 10px;
+            }
+          }
+        }
+      }
+      & .footer{
+        .btn-lg{
+          width: 100%;
+        }
+      }
+    }
+  }
+}

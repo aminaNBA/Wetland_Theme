@@ -1,0 +1,53 @@
+@import "./helpers/variables";
+@import "./helpers/break-points";
+@import "./helpers/btns";
+@import "./helpers/shadows";
+@import "./helpers/global";
+@import "./helpers/mixins";
+
+// GLOBAL RULES
+  @include global;
+// COMPONENTS
+  @include btn;
+
+
+/* START NAVBAR SECTION */
+@import  "./sections/navbar";
+/* END NAVBAR SECTION */
+
+/* START HERO SECTION */
+@import  "./sections/hero";
+/* END HERO SECTION */
+
+/* START SERVICES SECTION */
+@import  "./sections/services";
+/* END SERVICES SECTION */
+
+/* START ABOUT SECTION */
+@import "./sections/about";
+/* END ABOUT SECTION */
+
+/* START PLAN SECTION */
+@import "./sections/plan";
+/* END PLAN SECTION */
+
+/* START Testimonial SECTION */
+@import "./sections/testimonial";
+/* END Testimonial SECTION */
+
+/* START Features SECTION */
+@import "./sections/features";
+/* END Features SECTION */
+
+/* START BANNER SECTION */
+@import "./sections/banner";
+/* END BANNER SECTION */
+
+/* START FOOTER SECTION */
+@import "./sections/footer";
+/* END FOOTER SECTION */
+
+/* START COPYRIGHT SECTION */
+@import "./sections/copyright";
+/* END COPYRIGHT SECTION */
+

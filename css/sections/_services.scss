@@ -1,0 +1,53 @@
+.services {
+    padding-block: 5rem;
+    text-align: center;
+    box-shadow: 0 0 0 0 #ffffff;
+    .container {
+      .title {
+        color: $textColor;
+        margin-inline: auto;
+        margin-bottom: 4rem;
+        max-width: 40%;
+        @include breakpoints(small_screen){
+          max-width: 80%;
+        }
+      }
+      .cards {
+        display: flex;
+        @include breakpoints(medium_screen){
+          flex-wrap: wrap;
+          justify-content: center;
+          .box{
+            flex:0 0 calc(100% / 2 - 2rem);
+          }
+        }
+        @include breakpoints(small_screen){
+          flex-direction: column;
+        }
+        .box {
+          margin: 1rem;
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
+          border-radius: 0.75rem;
+          text-align: center;
+          border-top: 3px solid transparent;
+          @include breakpoints(medium_screen){
+            max-width: 50%;
+          }
+          &:hover {
+            border-top: 3px solid $maincolor;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+          }
+          img {
+            height: 150px;
+            margin-bottom: 1rem;
+          }
+          p {
+            color: $paragraph;
+            max-width: 70%;
+            margin: 1rem auto;
+            line-height: 1.5rem;
+          }
+        }
+      }
+    }
+  }

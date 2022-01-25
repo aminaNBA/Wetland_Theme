@@ -1,0 +1,13 @@
+%items {
+        transition: all .3s ease-in;
+        &:hover{
+          color:$maincolor;
+          margin-left: -3px;
+          &::before{
+              color: $maincolor;
+          }
+        }
+        & i {
+          margin-right: 0.5rem;
+        }
+      }

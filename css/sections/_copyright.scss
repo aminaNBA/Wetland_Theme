@@ -1,0 +1,16 @@
+.copyright{
+    background-color: $bgPlan;
+    border-top: 1px solid #eee;
+    .container{
+        .center{
+            display: flex;
+            justify-content: center;
+            .copyright_title{
+                color: $footer;
+                a{
+                    color: $maincolor;
+                }
+            }
+        }
+    }
+}

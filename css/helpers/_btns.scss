@@ -1,0 +1,55 @@
+@mixin btn {
+  .btn {
+    background-color: $maincolor;
+    border: none;
+    padding: .75rem 1.75rem;
+    border-radius: 0.5rem;
+    color: $whiteText;
+    cursor: pointer;
+    font-weight: bold;
+    border:2px solid transparent;
+    transition: all .3s ease-in;
+
+    &:hover {
+      box-shadow: $btnShadow;
+      background: #ffffff;
+      border:2px solid $maincolor;
+      color: $maincolor;
+    }
+  }
+}
+
+// %slideBtn{
+//   font-size: 15px;
+//   color: #ffffff;
+//   background: $maincolor;
+//   height: 44px;
+//   line-height: 40px;
+//   border: 2px solid $maincolor;
+//   text-align: center;
+//   padding: 0 30px;
+//   display: inline-block;
+//   font-weight: 600;
+//   border-radius: 6px;
+//   text-transform: capitalize;
+//   position: relative;
+//   z-index: 1;
+//   overflow: hidden;
+//   &::after {
+//     position: absolute;
+//     content: "";
+//     z-index: -1;
+//     display: block;
+//     left: -20%;
+//     right: -20%;
+//     top: -4%;
+//     height: 150%;
+//     width: 150%;
+//     bottom: 0;
+
+//   }
+//   &:hover::after{
+//     transform: skewX(45deg) scale(0, 1);
+//     background: #ffffff;
+//   }
+// }

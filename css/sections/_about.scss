@@ -1,0 +1,86 @@
+.about {
+  padding-block: 5rem;
+    & .details_up,
+    & .details_down {
+      display: flex;
+      align-items: center;
+      padding-bottom: 5rem;
+     @include breakpoints(small_screen){
+          flex-direction: column;
+          & .about_infos{
+            order:2;
+          }
+          & .about_imgs{
+            order:1;
+            margin-bottom: 2rem;
+          }
+          }
+      @include breakpoints(medium_screen ){
+        flex-direction: column;
+        & .about_infos{
+          order:2;
+        }
+        & .about_imgs{
+          order:1;
+          margin-bottom: 2rem;
+        }
+      }
+      & .about_infos {
+        h2 {
+          width: 80%;
+          margin-bottom: 1rem;
+        }
+        p {
+          width: 60%;
+          color: $paragraph;
+          line-height: 1.75rem;
+        }
+        & .benefits {
+          color: $paragraph;
+          margin-top: 1.5rem;
+          margin-bottom: 3rem;
+          line-height: 2rem;
+          div{
+            @extend %items;
+          }
+        }
+      }
+      & .about_imgs {
+        position: relative;
+        margin-top: 2rem;
+        .img-2 {
+          position: absolute;
+          bottom: 3px;
+          left: 26%;
+          box-shadow: $aboutShadow;
+        }
+        .img-3 {
+          position: absolute;
+          bottom: 20%;
+          left: 12%;
+          box-shadow: $aboutShadow;
+          @extend %hero-animation;
+        }
+      }
+    }
+    & .details_down {
+      & .about_infos {
+        margin-left: 6rem;
+        @include breakpoints(medium_screen){
+          margin-left: 0;
+        }
+        @include breakpoints(small_screen){
+          margin-left: 0;
+          }
+      }
+      & .about_imgs {
+        .img-2{
+          left: 15%;
+        }
+        .img-3 {
+          bottom: 20%;
+          left: 50%;
+        }
+      }
+    }
+  }
